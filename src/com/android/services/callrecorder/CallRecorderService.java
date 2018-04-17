@@ -104,23 +104,11 @@ public class CallRecorderService extends Service {
     }
 
     private int getAudioFormat() {
-        //int formatValue =  Settings.System.getInt(
-        //        getContentResolver(), Settings.System.CALL_RECORDING_FORMAT, mDefaultEncoder);
-        if (formatValue == 0){
             return MediaRecorder.OutputFormat.AMR_WB;
-        } else {
-            return MediaRecorder.OutputFormat.MPEG_4;
-        }
     }
 
     private int getAudioEncoder() {
-        //int formatValue =  Settings.System.getInt(
-        //        getContentResolver(), Settings.System.CALL_RECORDING_FORMAT, mDefaultEncoder);
-        if (formatValue == 0){
             return MediaRecorder.AudioEncoder.AMR_WB;
-        } else {
-            return MediaRecorder.AudioEncoder.HE_AAC;
-        }
     }
 
     private synchronized boolean startRecordingInternal(File file) {
